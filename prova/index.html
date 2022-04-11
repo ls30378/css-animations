@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a id="menu" href="#">Menu</a>
+    <a id="mainbtn" href="#main">Main</a>
+    <a id="subbtn" href="#submain">Submain</a>
+    <div class="main" id="main"></div>
+    <div class="submain" id="submain"></div>
+  </body>
+  <script>
+    const menubtn = document.getElementById("menu");
+    const mainbtn = document.getElementById("mainbtn");
+    const main = document.getElementById("main");
+    const submain = document.getElementById("submain");
+    const subbtn = document.getElementById("subbtn");
+    console.log(mainbtn, main);
+    menubtn.addEventListener("click", () => {
+      main.classList.toggle("hover");
+      submain.classList.toggle("hover");
+    });
+    mainbtn.addEventListener("click", () => {
+      main.classList.toggle("active");
+    });
+    subbtn.addEventListener("click", () => {
+      submain.classList.toggle("active");
+    });
+  </script>
+</html>

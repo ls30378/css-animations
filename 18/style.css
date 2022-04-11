@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  font-size: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: #2f2f2f;
+  position: relative;
+  border: none;
+  padding: 20px 80px;
+  overflow: hidden;
+}
+
+a::before {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2f2f2f;
+  transition: 0.5s;
+  transform: translateX(-100%);
+}
+a:hover::before {
+  transform: translateX(0);
+}
+
+a::after {
+  content: "";
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2f2f2f;
+  transition: 0.5s;
+  transform: translateY(100%);
+}
+
+a:hover::after {
+  transform: translateY(0);
+}
+
+a span::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #2f2f2f;
+  transition: 0.5s;
+  transform: translateY(-100%);
+}
+
+a:hover span::before {
+  transform: translateY(0);
+}
+
+a span::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #2f2f2f;
+  transition: 0.5s;
+  transform: translateX(100%);
+}
+
+a:hover span::after {
+  transform: translateX(0);
+}
